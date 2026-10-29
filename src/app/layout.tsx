@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { IBM_Plex_Mono, Plus_Jakarta_Sans } from "next/font/google";
+import { Plus_Jakarta_Sans, Shippori_Mincho } from "next/font/google";
 import "./globals.css";
 
 const jakartaSans = Plus_Jakarta_Sans({
@@ -7,10 +7,10 @@ const jakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
 });
 
-const plexMono = IBM_Plex_Mono({
-  variable: "--font-plex-mono",
+const shipporiMincho = Shippori_Mincho({
+  variable: "--font-shippori-mincho",
   subsets: ["latin"],
-  weight: ["400", "500"],
+  weight: ["600", "800"],
 });
 
 export const metadata: Metadata = {
@@ -22,7 +22,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="ja"
-      className={`${jakartaSans.variable} ${plexMono.variable} dark h-full antialiased`}
+      className={`${jakartaSans.variable} ${shipporiMincho.variable} dark h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>

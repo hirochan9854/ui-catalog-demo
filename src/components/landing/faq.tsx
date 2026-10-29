@@ -18,12 +18,12 @@ const faqs = [
 export function Faq() {
   return (
     <section id="faq" className="px-6 py-24">
-      <div className="mx-auto max-w-2xl">
-        <h2 className="mb-8 text-center text-3xl font-bold tracking-tight sm:text-4xl">よくある質問</h2>
+      <div className="mx-auto grid max-w-5xl gap-8 md:grid-cols-[1fr_2fr]">
+        <h2 className="font-heading text-3xl font-extrabold sm:text-4xl">よくある質問</h2>
         <Accordion>
           {faqs.map(({ question, answer }) => (
             <AccordionItem key={question} value={question}>
-              <AccordionTrigger>{question}</AccordionTrigger>
+              <AccordionTrigger className="text-base">{question}</AccordionTrigger>
               <AccordionContent className="text-muted-foreground">{answer}</AccordionContent>
             </AccordionItem>
           ))}

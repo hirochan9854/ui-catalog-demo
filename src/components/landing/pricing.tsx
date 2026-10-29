@@ -32,22 +32,22 @@ const plans = [
 export function Pricing() {
   return (
     <section id="pricing" className="px-6 py-24">
-      <div className="mx-auto mb-12 max-w-2xl text-center">
-        <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">料金プラン</h2>
+      <div className="mx-auto mb-12 max-w-5xl">
+        <h2 className="font-heading text-3xl font-extrabold sm:text-4xl">料金プラン</h2>
         <p className="mt-4 text-muted-foreground">Plus プランは30日間無料でお試しいただけます。</p>
       </div>
       <div className="mx-auto grid max-w-5xl gap-6 md:grid-cols-3">
         {plans.map((plan) => (
-          <Card key={plan.name} className={cn(plan.recommended && "ring-2 ring-primary md:-translate-y-2")}>
+          <Card key={plan.name} className={cn(plan.recommended && "ring-2 ring-primary")}>
             <CardHeader>
               <div className="flex items-center justify-between">
-                <CardTitle className="text-lg">{plan.name}</CardTitle>
+                <CardTitle className="font-heading text-xl font-semibold">{plan.name}</CardTitle>
                 {plan.recommended && <Badge>おすすめ</Badge>}
               </div>
               <CardDescription>{plan.description}</CardDescription>
             </CardHeader>
             <CardContent className="flex-1">
-              <p className="text-3xl font-bold">
+              <p className="font-heading text-4xl font-extrabold tabular-nums">
                 {plan.price}
                 <span className="text-sm font-normal text-muted-foreground"> / 月</span>
               </p>

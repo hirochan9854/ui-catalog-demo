@@ -13,17 +13,14 @@ const factors = [
 
 export function FactorMarquee() {
   return (
-    <section className="border-y border-border/60 py-10">
-      <p className="mb-6 text-center text-sm text-muted-foreground">
-        星の見え具合に関わるデータを、ひとつの予報にまとめます
+    <section className="border-y border-border py-8">
+      <p className="mx-auto mb-5 max-w-5xl px-6 text-sm text-muted-foreground lg:px-0">
+        予報に使っているデータ
       </p>
       <div className="relative">
         <Marquee pauseOnHover className="[--duration:30s]">
           {factors.map((factor) => (
-            <span
-              key={factor}
-              className="mx-2 rounded-full border border-border/70 px-4 py-1.5 text-sm text-muted-foreground"
-            >
+            <span key={factor} className="mx-6 font-heading text-xl font-semibold">
               {factor}
             </span>
           ))}
